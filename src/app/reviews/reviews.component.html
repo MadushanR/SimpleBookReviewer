@@ -1,0 +1,18 @@
+<section class="reviews-section">
+  <div *ngFor="let review of reviews" class="review-item">
+    <div class="card border-success mb-3">
+      <div class="card-header bg-success text-white">
+        Review
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Reviewer Name:</strong> {{ review.reviewerName }}</p>
+        <p class="card-text"><strong>Rating:</strong> {{ review.rating }}</p>
+        <p class="card-text"><strong>Review:</strong> {{ review.comment }}</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-success" (click)="navigateToAddReview()" title="Add a new review">
+    Add Review
+  </button>
+</section>
